@@ -1,0 +1,21 @@
+<ng-form>
+	<button ng-click="add_assessment()">+</button>
+	<button ng-click="remove_assessment()">-</button>
+	<div ng-repeat="assessment in assessments">
+		<input ng-model="assessment.name" type="text" name="name">
+		<input ng-model="assessment.grade" type="number" name="grade" min="0" max="100">
+		<input ng-model="assessment.weight" type="number" name="weight" min="0" max="100">
+	</div>
+	<div>
+		<input value="Final" type="text" name="name" disabled>
+		<input ng-value="final_mark" disabled>
+		<input ng-value="100 - total_weight" disabled>
+	</div>
+</ng-form>
+<div ng-if="error">{{ error }}</div>
+<div ng-if="dropit">DROP IT LIKE ITS HOT</div>
+<div ng-if="acedit">YOU ACED IT</div>
+current mark: {{ current_mark }}
+<br>
+goal mark: <input ng-model="goal_mark" type="number">
+{{ update() }}
