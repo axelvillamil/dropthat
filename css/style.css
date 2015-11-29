@@ -1,4 +1,225 @@
 body {
-	background-color: red;
+	background-color: #f7f7f7 !important;
+	color: !important;
 }
 
+@media (min-width: 1200px)
+.container {
+	width: 1199px;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+#down-btn {
+    -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 5s;
+
+}
+
+.container {
+margin: 0 auto;
+width: 100% !important;
+}
+
+#page-logo {
+	margin-bottom: 50px;
+}
+
+#page-logo img {
+	display: block;
+	margin: auto;
+}
+
+.glyphicon-circle-arrow-down {
+	font-size: 60px;
+	color: rgba(199, 199, 199, 0.74);
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.glyphicon-circle-arrow-down:hover {
+	color: #00D181;
+}
+
+#page-logo span{
+	text-align: center !important;
+	display: block !important;
+		 -webkit-animation: fadein 10s;
+
+}
+
+/*HOVER EFFECT BOB*/
+
+-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+.hvr-bob {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-bob, .hvr-bob:focus, .hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+
+/*ICONS*/
+
+#icon_page {
+	margin: auto;
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 100vh;
+}
+
+#icon_set {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	width: auto;
+
+}
+
+.icons {
+	width: 23%;
+	margin: 10px;
+}
+
+
+/*BTN*/
+
+
+.btn-dtn {
+	color: white;
+}
+
+.btn {
+	-webkit-transition: border 0.3s !important;
+	-moz-transition: border 0.3s !important;
+	-o-transition: border 0.3s !important;
+	transition: border 0.3s !important;
+}
+
+.btn{
+
+}
+
+.btn:hover{
+	color: #43d1af !important;
+	border: solid 2px #43d1af;
+}
+
+
+/*INPUT STYLING BEGIN*/
+
+#mark-calc {
+	margin-top: 50px;
+}
+
+input {
+	text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-name {
+	font-weight: bold;
+
+}
+
+.input-style {
+	padding: 5px;
+	transition: border 0.3s;
+	outline: none;
+	margin-bottom: 10px;
+}
+
+.input-style:focus,
+.input-style.focus {
+	border: solid 2px #43d1af;
+}
+
+#whatyouwant {
+	/*margin-left: 7px;*/
+	margin-top: 10px;
+}
+
+/*INPUT STYLING END*/
+
+
+
+.well {
+}
