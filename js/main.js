@@ -1,6 +1,14 @@
 $(window).load(carouselWidth);
 $(window).on('resize',carouselWidth);
 
+$(document).ready(function() {
+
+  $(".down-btn").click(function () {
+    console.log("Hello!");
+  });
+
+});
+
 
 function carouselWidth() {
   var x = $( window ).height();
