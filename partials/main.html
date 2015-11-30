@@ -32,8 +32,8 @@
 							<thead>
 								<tr>
 									<th>Name</th>
-									<th>Mark</th>
-									<th>Weight</th>
+									<th>Mark (%)</th>
+									<th>Weight (%)</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -45,28 +45,6 @@
 							</tbody>
 						</table>
 
-						<!-- <div>
-							<input class="input-name input-style" value="Final" type="text" name="name" disabled>
-							<input class="input-style" ng-value="final_mark" disabled>
-							<input class="input-style" ng-value="100 - total_weight" disabled>
-						</div> -->
-
-						<!-- <div ng-repeat="assessment in assessments">
-
-
-
-							<input class="input-name input-style" ng-model="assessment.name" type="text" name="name">
-							<input class="input-style" ng-model="assessment.grade" type="number" name="grade" min="0" max="100">
-							<input class="input-style" ng-model="assessment.weight" type="number" name="weight" min="0" max="100">
-							<button class="btn btn-dtn" ng-click="add_assessment()">+</button>
-							<button class="btn btn-dtn" ng-click="remove_assessment()">-</button>
-						</div>
-						<div>
-							<input class="input-name input-style" value="Final" type="text" name="name" disabled>
-							<input class="input-style" ng-value="final_mark" disabled>
-							<input class="input-style" ng-value="100 - total_weight" disabled>
-						</div>
-					</ng-form> -->
 	</div>
 </div>
 <div class="col-md-6">
@@ -74,11 +52,38 @@
 
 					<h2 class="results">Your current mark is <b>{{ current_mark | number }}%</b></h2>
 					<br>
-					<h2 class="results">To get a <input class="input-style" id="whatyouwant" ng-model="goal_mark" type="number"> you need a <b>{{ final_mark | number }}%</b> on your final</h2>
+					<h2 class="results">To get a <input class="input-style" id="whatyouwant" ng-model="goal_mark" type="number">% in the class, you need a <b>{{ final_mark | number }}%</b> on your final</h2>
 
-					<div ng-if="error"><h1>{{ error }}</h1></div>
-					<div ng-if="dropit"><h1>DROP IT LIKE IT'S HOT</h1> <a href="https://sws.rosi.utoronto.ca/sws/"><button class="btn btn-primary">CLICK TO DROP</button></a></div>
-					<div ng-if="acedit"><h1>YOU ACED IT</h1></div>
+					<div ng-if="error"><h1>{{ error }}</h1></div><br>
+					<div ng-if="dropit">
+						<h1 id="dropthiscourse">It is strongly advised that you drop this course</h1>
+						<a href="https://sws.rosi.utoronto.ca/sws/">
+							<img class="school-icons" src="img/uoft.png">
+						</a>
+						<a href="https://passportyork.yorku.ca/ppylogin/ppylogin">
+							<img class="school-icons" src="img/york.png">
+						</a>
+						<a href="https://cas.ryerson.ca/login?service=https%3A%2F%2Fmy.ryerson.ca%2FLogin">
+							<img class="school-icons" src="img/ryerson.png">
+						</a>
+						<a href="https://student.uwo.ca/psp/heprdweb/?cmd=login&languageCd=ENG&">
+							<img class="school-icons" src="img/western.png">
+						</a>
+						<a href="https://horizon.mcgill.ca/pban1/twbkwbis.P_WWWLogin">
+							<img class="school-icons" src="img/mcgill.png">
+						</a>
+						<a href="https://quest.pecs.uwaterloo.ca/psp/SS/?cmd=login&languageCd+ENG&languageCd=ENG&">
+							<img class="school-icons" src="img/waterloo.png">
+						</a>
+						<a href="https://epprd.mcmaster.ca/psp/prepprd/?cmd=login">
+							<img class="school-icons" src="img/mcmaster.png">
+						</a>
+						<a href="http://www.uottawa.ca/en/students">
+							<img class="school-icons" src="img/ottawa.png">
+						</a>
+
+					</div>
+					<div ng-if="acedit"><h1 id="aced">YOU ACED IT</h1></div>
 	</div>
 	</div>
 </div>

@@ -288,9 +288,19 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-bottom: 40px;
 }
 
+.school-icons {
+	width: 23%;
+}
+
 .results {
 	font-weight: 200;
 }
 
-.well {
+#dropthiscourse {
+
+	color: #D23E46;
+}
+
+#aced {
+	color: #00D181;
 }
