@@ -6,17 +6,75 @@ dropitControllers.controller("MainCtrl", function(
 			$location) {
 	$scope.assessments = [
 		{
-			name : "test",
-			grade : 75,
+			name : "Quiz",
+			grade : 80,
 			weight: 10,
 		},
 		{
-			name : "test1",
+			name : "Assignment",
+			grade : 75,
+			weight: 15,
+		},
+		{
+			name : "Midterm",
 			grade : 70,
-			weight: 5,
+			weight: 30,
 		},
 	];
 	$scope.goal_mark = 50;
+	$scope.icons =
+		{
+			calc: 'calc_wsh',
+			coffee: 'coffee_wsh',
+			chair: 'chair_wsh',
+			phrase: '______________',
+			class: '',
+			netflix: ''
+		}
+	$scope.calcchange = function(){
+		if ($scope.icons.calc = 'calc_wsh'){
+			$scope.icons.calc='calc';
+			$scope.icons.phrase="pass this course";
+			$scope.icons.class='yellow';
+		}
+	}
+	$scope.calcback = function(){
+		if ($scope.icons.calc = 'calc'){
+			$scope.icons.calc='calc_wsh';
+			$scope.icons.phrase='______________';
+			$scope.icons.class='';
+		}
+	}
+	$scope.coffeechange = function(){
+		if ($scope.icons.coffee = 'coffee_wsh'){
+			$scope.icons.coffee='coffee';
+			$scope.icons.phrase="stay awake";
+			$scope.icons.class='blue';
+		}
+	}
+	$scope.coffeeback = function(){
+		if ($scope.icons.coffee = 'coffee'){
+			$scope.icons.coffee='coffee_wsh';
+			$scope.icons.phrase='______________'
+			$scope.icons.class='';
+		}
+	}
+	$scope.chairchange = function(){
+		if ($scope.icons.chair = 'chair_wsh'){
+			$scope.icons.chair='chair';
+			$scope.icons.phrase=" chill";
+			$scope.icons.netflix="Netflix &"
+			$scope.icons.class='orange';
+		}
+	}
+	$scope.chairback = function(){
+		if ($scope.icons.chair = 'chair'){
+			$scope.icons.chair='chair_wsh';
+			$scope.icons.phrase='______________'
+			$scope.icons.netflix=''
+			$scope.icons.class='';
+		}
+	}
 	$scope.add_assessment = function(){
 		$scope.assessments.push({
 			name : "new assessment",
@@ -34,7 +92,7 @@ dropitControllers.controller("MainCtrl", function(
 			current_score += assessment.grade * (assessment.weight/100.0);
 			total_weight += assessment.weight
 		});
-		
+
 		// Error checking
 		if (total_weight >= 100){
 			$scope.error = "Your total weight is over 100";
