@@ -1,21 +1,90 @@
-<ng-form>
-	<button ng-click="add_assessment()">+</button>
-	<button ng-click="remove_assessment()">-</button>
-	<div ng-repeat="assessment in assessments">
-		<input ng-model="assessment.name" type="text" name="name">
-		<input ng-model="assessment.grade" type="number" name="grade" min="0" max="100">
-		<input ng-model="assessment.weight" type="number" name="weight" min="0" max="100">
+<div id="mark-calc" class="container">
+
+<div class="container" id="page-logo">
+		<img src="img/dtn.gif">
+		<div>
+			<a href="#" onclick="$('#icon_page').animatescroll();" id="down-btn" class="hvr-bob"><span class="glyphicon glyphicon-circle-arrow-down"></span></a>
+		</div>
 	</div>
-	<div>
-		<input value="Final" type="text" name="name" disabled>
-		<input ng-value="final_mark" disabled>
-		<input ng-value="100 - total_weight" disabled>
+
+			<div id="icon_page" class="col-lg-12">
+				<div ng-controller="MainCtrl" id="icon_set">
+					<a href="#" onclick="$('#calculator_page').animatescroll();" id="calc_link"><img id="calc_icon" class="icons" ng-mouseover="calcchange()" ng-mouseleave="calcback()" ng-src="img/{{icons.calc}}.png"></a>
+					<img id="coffee_icon" class="icons" ng-mouseover="coffeechange()" ng-mouseleave="coffeeback()" ng-src="img/{{icons.coffee}}.png">
+					<img id="chair_icon" class="icons" ng-mouseover="chairchange()" ng-mouseleave="chairback()" ng-src="img/{{icons.chair}}.png">
+					<h1>I need to <b class="{{icons.class}}"><b class="strikethrough">{{icons.netflix}}</b>{{icons.phrase}}</b></h1>
+				</div>
+			</div>
+
+
+<div id="calculator_page" class="col-lg-12">
+	<div class="col-md-6">
+		<div class=well>
+					{{ update() }}
+					<!-- <ng-form> -->
+						<h2 id="add_work" class="results">
+							Add the work you've done in class
+							<button class="btn btn-dtn" id="rmv-btn" ng-click="remove_assessment()">-</button>
+							<button class="btn btn-dtn" id="add-btn" ng-click="add_assessment()">+</button>
+						</h2>
+
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Mark</th>
+									<th>Weight</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="assessment in assessments">
+									<td><input class="input-name input-style" ng-model="assessment.name" type="text" name="name"></td>
+									<td><input class="input-style" ng-model="assessment.grade" type="number" name="grade" min="0" max="100"></td>
+									<td><input class="input-style" ng-model="assessment.weight" type="number" name="weight" min="0" max="100"></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<!-- <div>
+							<input class="input-name input-style" value="Final" type="text" name="name" disabled>
+							<input class="input-style" ng-value="final_mark" disabled>
+							<input class="input-style" ng-value="100 - total_weight" disabled>
+						</div> -->
+
+						<!-- <div ng-repeat="assessment in assessments">
+
+
+
+							<input class="input-name input-style" ng-model="assessment.name" type="text" name="name">
+							<input class="input-style" ng-model="assessment.grade" type="number" name="grade" min="0" max="100">
+							<input class="input-style" ng-model="assessment.weight" type="number" name="weight" min="0" max="100">
+							<button class="btn btn-dtn" ng-click="add_assessment()">+</button>
+							<button class="btn btn-dtn" ng-click="remove_assessment()">-</button>
+						</div>
+						<div>
+							<input class="input-name input-style" value="Final" type="text" name="name" disabled>
+							<input class="input-style" ng-value="final_mark" disabled>
+							<input class="input-style" ng-value="100 - total_weight" disabled>
+						</div>
+					</ng-form> -->
 	</div>
-</ng-form>
-<div ng-if="error">{{ error }}</div>
-<div ng-if="dropit">DROP IT LIKE ITS HOT</div>
-<div ng-if="acedit">YOU ACED IT</div>
-current mark: {{ current_mark }}
-<br>
-goal mark: <input ng-model="goal_mark" type="number">
-{{ update() }}
+</div>
+<div class="col-md-6">
+	<div class="well">
+
+					<h2 class="results">Your current mark is <b>{{ current_mark | number }}%</b></h2>
+					<br>
+					<h2 class="results">To get a <input class="input-style" id="whatyouwant" ng-model="goal_mark" type="number"> you need a <b>{{ final_mark | number }}%</b> on your final</h2>
+
+					<div ng-if="error"><h1>{{ error }}</h1></div>
+					<div ng-if="dropit"><h1>DROP IT LIKE IT'S HOT</h1> <a href="https://sws.rosi.utoronto.ca/sws/"><button class="btn btn-primary">CLICK TO DROP</button></a></div>
+					<div ng-if="acedit"><h1>YOU ACED IT</h1></div>
+	</div>
+	</div>
+</div>
+
+
+
+
+
+</div>
