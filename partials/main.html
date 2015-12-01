@@ -2,12 +2,15 @@
 
 <div class="container" id="page-logo">
 		<img class="img-responsive" src="img/dtn.gif">
-		<div>
+		<div class="hidden-xs hidden-sm">
 			<a href="#" onclick="$('#icon_page').animatescroll();" id="down-btn" class="hvr-bob"><span class="glyphicon glyphicon-circle-arrow-down"></span></a>
+		</div>
+		<div class="visible-xs visible-sm">
+			<a href="#" onclick="$('#icon_page_mobile').animatescroll();" id="down-btn" class="hvr-bob"><span class="glyphicon glyphicon-circle-arrow-down"></span></a>
 		</div>
 	</div>
 
-			<div id="icon_page" class="col-lg-12">
+			<div id="icon_page" class="col-lg-12 hidden-xs hidden-sm">
 				<div ng-controller="MainCtrl" id="icon_set">
 					<a href="#" onclick="$('#calculator_page').animatescroll();" id="calc_link"><img id="calc_icon" class="icons" ng-mouseover="calcchange()" ng-mouseleave="calcback()" ng-src="img/{{icons.calc}}.png"></a>
 					<img id="coffee_icon" class="icons" ng-mouseover="coffeechange()" ng-mouseleave="coffeeback()" ng-src="img/{{icons.coffee}}.png">
@@ -15,6 +18,15 @@
 					<h1>I need to <b class="{{icons.class}}"><b class="strikethrough">{{icons.netflix}}</b>{{icons.phrase}}</b></h1>
 				</div>
 			</div>
+
+			<div id="icon_page_mobile" class="col-lg-12 visible-xs visible-sm">
+				<div ng-controller="MainCtrl" id="icon_set">
+					<a href="#" onclick="$('#calculator_page').animatescroll();" id="calc_link"><img id="calc_icon" class="icons_mobile" ng-mouseover="calcchange()" ng-mouseleave="calcback()" ng-src="img/{{icons.calc}}.png"></a>
+					<img id="coffee_icon" class="icons_mobile" ng-mouseover="coffeechange()" ng-mouseleave="coffeeback()" ng-src="img/{{icons.coffee}}.png">
+					<img id="chair_icon" class="icons_mobile" ng-mouseover="chairchange()" ng-mouseleave="chairback()" ng-src="img/{{icons.chair}}.png">
+				</div>
+			</div>
+
 
 
 <div id="calculator_page" class="col-lg-12">
