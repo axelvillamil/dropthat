@@ -92,11 +92,8 @@ dropitControllers.controller("MarksCtrl", function(
 		},
 	];
 	$scope.mark_load = function(){
-		var x = $( "#left-well" ).height();
-	  var y = $( "#right-well" ).height();
-	  var z = x + y + 200;
-
-	  $("#calculator_page").height(z);
+		var x = $( document ).height();
+		$("#calculator_page").height(x);
 	}
 	$scope.add_assessment = function(){
 		$scope.mark_load();
@@ -110,6 +107,7 @@ dropitControllers.controller("MarksCtrl", function(
 		$scope.assessments.pop();
 	}
 	$scope.update = function(){
+		$scope.mark_load();
 		var total_weight = 0;
 		var current_score = 0;
 		angular.forEach($scope.assessments, function(assessment){
