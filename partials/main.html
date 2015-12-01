@@ -1,13 +1,18 @@
 <div id="mark-calc" class="container">
 
 	<div class="container" id="page-logo">
-		<img src="img/dtn.gif">
 		<div>
-			<a href="#" onclick="$('#icon_page').animatescroll();" id="down-btn" class="hvr-bob"><span class="glyphicon glyphicon-circle-arrow-down"></span></a>
+		<img class="img-responsive" src="img/dtn.gif">
+			<div class="hidden-xs hidden-sm">
+				<a href="#" onclick="$('#icon_page').animatescroll();" id="down-btn" class="hvr-bob"><span class="glyphicon glyphicon-circle-arrow-down"></span></a>
+			</div>
+			<div class="visible-xs visible-sm">
+				<a href="#" onclick="$('#icon_page_mobile').animatescroll();" id="down-btn" class="hvr-bob"><span class="glyphicon glyphicon-circle-arrow-down"></span></a>
+			</div>
 		</div>
 	</div>
 
-	<div id="icon_page" class="col-lg-12">
+	<div id="icon_page" class="col-lg-12 hidden-xs hidden-sm">
 		<div ng-controller="MainCtrl" id="icon_set">
 			<a ng-click="open_calculator()" id="calc_link">
 				<img id="calc_icon" class="icons" ng-mouseover="calcchange()" ng-mouseleave="calcback()" ng-src="img/{{icons.calc}}.png">
@@ -19,6 +24,56 @@
 				<img id="chair_icon" class="icons" ng-mouseover="chairchange()" ng-mouseleave="chairback()" ng-src="img/{{icons.chair}}.png">
 			</a>
 			<h1>I need to <b class="{{icons.class}}"><b class="strikethrough">{{icons.netflix}}</b>{{icons.phrase}}</b></h1>
+		</div>
+	</div>
+
+	<div id="icon_page_mobile" class="col-lg-12 visible-xs visible-sm">
+		<div ng-controller="MainCtrl" id="icon_set_mobile">
+
+
+			<div class="media" id="mark_media">
+			  <div class="media-left">
+					<a ng-click="open_calculator()" id="calc_link">
+						<img id="calc_icon" class="icons_mobile" ng-mouseover="calcchange()" ng-mouseleave="calcback()" ng-src="img/{{icons.calc}}.png">
+					</a>
+			  </div>
+			  <div class="media-body icon_titles">
+			    <h2 class="media-heading">Mark calculator</h2>
+			  </div>
+			</div>
+
+			<div class="media">
+				<div class="media-left">
+					<a ng-click="open_coffee()" id="calc_link">
+						<img id="coffee_icon" class="icons_mobile" ng-mouseover="coffeechange()" ng-mouseleave="coffeeback()" ng-src="img/{{icons.coffee}}.png">
+					</a>
+				</div>
+				<div class="media-body icon_titles">
+					<h2 class="media-heading">Stay awake</h2>
+				</div>
+			</div>
+
+			<div class="media">
+				<div class="media-left">
+					<a ng-click="open_chill()" id="calc_link">
+						<img id="chair_icon" class="icons_mobile" ng-mouseover="chairchange()" ng-mouseleave="chairback()" ng-src="img/{{icons.chair}}.png">
+					</a>
+				</div>
+				<div class="media-body icon_titles">
+					<h2 class="media-heading">Chill</h2>
+				</div>
+			</div>
+
+
+			<!-- <a ng-click="open_calculator()" id="calc_link">
+				<img id="calc_icon" class="icons_mobile" ng-mouseover="calcchange()" ng-mouseleave="calcback()" ng-src="img/{{icons.calc}}.png">
+			</a>
+			<a ng-click="open_coffee()" id="calc_link">
+				<img id="coffee_icon" class="icons_mobile" ng-mouseover="coffeechange()" ng-mouseleave="coffeeback()" ng-src="img/{{icons.coffee}}.png">
+			</a>
+			<a ng-click="open_chill()" id="calc_link">
+				<img id="chair_icon" class="icons_mobile" ng-mouseover="chairchange()" ng-mouseleave="chairback()" ng-src="img/{{icons.chair}}.png">
+			</a> -->
 		</div>
 	</div>
 </div>

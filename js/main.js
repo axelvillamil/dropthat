@@ -2,10 +2,9 @@
 // $(window).on('resize',carouselWidth);
 //
 // function carouselWidth() {
-//   var x = $( window ).height();
-//   var new_height = x/2;
+//   var x = $( document ).height();
 //
-//   $("#icon_set").height(new_height);
+//   $("#calculator_page").height(x);
 //
 //   console.log(new_height)
 // };
