@@ -148,21 +148,21 @@ width: 100% !important;
 	height: 100vh;
 }
 
-/*#icon_page_mobile {
+#icon_page_mobile {
 	margin: 0 auto;
 	display: table;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	height: 100vh;
-}*/
+}
 
-#icon_page_mobile {
+/*#icon_page_mobile {
 	margin: 0 auto;
 	display: table !important;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	height: 100vh;
-}
+}*/
 
 #icon_set {
 	text-align: center;
