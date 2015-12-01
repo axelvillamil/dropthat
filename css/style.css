@@ -24,7 +24,7 @@ width: 100% !important;
 }
 
 #page-logo {
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	height: 100vh;
 }
 
@@ -136,7 +136,15 @@ width: 100% !important;
 
 #icon_page {
 	margin: 0 auto;
-	display: block;
+	display: table;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 100vh;
+}
+
+#icon_page_mobile {
+	margin: 0 auto;
+	display: table;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	height: 100vh;
@@ -158,16 +166,34 @@ width: 100% !important;
 
 }
 
+#icon_set_mobile {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	width: auto;
+
+}
+
+#mark_media {
+	margin-top: 15px !important;
+}
+
 .icons {
 	width: 23%;
 	margin: 10px;
 }
 
 .icons_mobile {
-	width: 50%;
+
+	width: 150px;
 	margin: 10px;
 }
 
+.icon_titles {
+	vertical-align: middle !important;
+}
+
+>>>>>>> master
 #calc_link:active{
 	opacity: 30%;
 }
@@ -236,7 +262,28 @@ width: 100% !important;
 	display: block;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	height: 100%;
 	background-color: #F4CC25;
+
+}
+
+#coffee_page {
+	margin: 0 auto;
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 100%;
+	background-color: #2791F2;
+
+}
+
+#chill_page {
+	margin: 0 auto;
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 100%;
+	background-color: #DB8E3A;
 
 }
 
@@ -283,7 +330,7 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-left: 5px;
 	margin-right: 5px;
 	margin-top: 10px;
-	width: 30%;
+	width: 39%;
 }
 
 #add-btn {
