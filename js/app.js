@@ -18,6 +18,10 @@ dropitApp.config(["$routeProvider",
 				when("/coffee", {
 					templateUrl : "partials/coffee.html",
 					controller : "CoffeeCtrl"
+				}).
+				when("/chill", {
+					templateUrl : "partials/chill.html",
+					controller : "ChillCtrl"
 				});
 		}
 ]);

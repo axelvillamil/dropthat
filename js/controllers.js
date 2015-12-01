@@ -10,6 +10,9 @@ dropitControllers.controller("MainCtrl", function(
 	$scope.open_coffee = function(){
 		$location.path("/coffee/");
 	}
+	$scope.open_chill = function(){
+		$location.path("/chill/");
+	}
 	$scope.icons =
 		{
 			calc: 'calc_wsh',
@@ -144,4 +147,11 @@ dropitControllers.controller("CoffeeCtrl", function(
 		$scope.required = Math.ceil(Math.max(1, $scope.current_coffees * ratio));
 	}
 	$scope.update();
+});
+
+dropitControllers.controller("ChillCtrl", function(
+			$scope,
+			$rootScope,
+			$http,
+			$location) {
 });
