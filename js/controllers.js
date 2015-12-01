@@ -91,7 +91,15 @@ dropitControllers.controller("MarksCtrl", function(
 			weight: 30,
 		},
 	];
+	$scope.mark_load = function(){
+		var x = $( "#left-well" ).height();
+	  var y = $( "#right-well" ).height();
+	  var z = x + y + 200;
+
+	  $("#calculator_page").height(z);
+	}
 	$scope.add_assessment = function(){
+		$scope.mark_load();
 		$scope.assessments.push({
 			name : "new assessment",
 			grade : 75,
