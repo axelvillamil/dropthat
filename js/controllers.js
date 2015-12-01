@@ -91,12 +91,9 @@ dropitControllers.controller("MarksCtrl", function(
 			weight: 30,
 		},
 	];
-	$scope.mark_load = function(){
-		var x = $( document ).height();
-		$("#calculator_page").height(x);
-	}
+
 	$scope.add_assessment = function(){
-		$scope.mark_load();
+
 		$scope.assessments.push({
 			name : "new assessment",
 			grade : 75,
@@ -107,7 +104,7 @@ dropitControllers.controller("MarksCtrl", function(
 		$scope.assessments.pop();
 	}
 	$scope.update = function(){
-		$scope.mark_load();
+
 		var total_weight = 0;
 		var current_score = 0;
 		angular.forEach($scope.assessments, function(assessment){
