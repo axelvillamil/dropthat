@@ -1,95 +1,22 @@
 <div id="mark-calc" class="container">
 
-<div class="container" id="page-logo">
+	<div class="container" id="page-logo">
 		<img src="img/dtn.gif">
 		<div>
 			<a href="#" onclick="$('#icon_page').animatescroll();" id="down-btn" class="hvr-bob"><span class="glyphicon glyphicon-circle-arrow-down"></span></a>
 		</div>
 	</div>
 
-			<div id="icon_page" class="col-lg-12">
-				<div ng-controller="MainCtrl" id="icon_set">
-					<a href="#" onclick="$('#calculator_page').animatescroll();" id="calc_link"><img id="calc_icon" class="icons" ng-mouseover="calcchange()" ng-mouseleave="calcback()" ng-src="img/{{icons.calc}}.png"></a>
-					<img id="coffee_icon" class="icons" ng-mouseover="coffeechange()" ng-mouseleave="coffeeback()" ng-src="img/{{icons.coffee}}.png">
-					<img id="chair_icon" class="icons" ng-mouseover="chairchange()" ng-mouseleave="chairback()" ng-src="img/{{icons.chair}}.png">
-					<h1>I need to <b class="{{icons.class}}"><b class="strikethrough">{{icons.netflix}}</b>{{icons.phrase}}</b></h1>
-				</div>
-			</div>
-
-
-<div id="calculator_page" class="col-lg-12">
-	<div class="col-md-6">
-		<div class=well>
-					{{ update() }}
-					<!-- <ng-form> -->
-						<h2 id="add_work" class="results">
-							Add the work you've done in class
-							<button class="btn btn-dtn" id="rmv-btn" ng-click="remove_assessment()">-</button>
-							<button class="btn btn-dtn" id="add-btn" ng-click="add_assessment()">+</button>
-						</h2>
-
-						<table class="table">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Mark (%)</th>
-									<th>Weight (%)</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr ng-repeat="assessment in assessments">
-									<td><input class="input-name input-style" ng-model="assessment.name" type="text" name="name"></td>
-									<td><input class="input-style" ng-model="assessment.grade" type="number" name="grade" min="0" max="100"></td>
-									<td><input class="input-style" ng-model="assessment.weight" type="number" name="weight" min="0" max="100"></td>
-								</tr>
-							</tbody>
-						</table>
-
+	<div id="icon_page" class="col-lg-12">
+		<div ng-controller="MainCtrl" id="icon_set">
+			<a ng-click="open_calculator()" id="calc_link">
+				<img id="calc_icon" class="icons" ng-mouseover="calcchange()" ng-mouseleave="calcback()" ng-src="img/{{icons.calc}}.png">
+			</a>
+			<a ng-click="open_coffee()" id="calc_link">
+				<img id="coffee_icon" class="icons" ng-mouseover="coffeechange()" ng-mouseleave="coffeeback()" ng-src="img/{{icons.coffee}}.png">
+			</a>
+			<img id="chair_icon" class="icons" ng-mouseover="chairchange()" ng-mouseleave="chairback()" ng-src="img/{{icons.chair}}.png">
+			<h1>I need to <b class="{{icons.class}}"><b class="strikethrough">{{icons.netflix}}</b>{{icons.phrase}}</b></h1>
+		</div>
 	</div>
-</div>
-<div class="col-md-6">
-	<div class="well">
-
-					<h2 class="results">Your current mark is <b>{{ current_mark | number }}%</b></h2>
-					<br>
-					<h2 class="results">To get a <input class="input-style" id="whatyouwant" ng-model="goal_mark" type="number">% in the class, you need a <b>{{ final_mark | number }}%</b> on your final</h2>
-
-					<div ng-if="error"><h1>{{ error }}</h1></div><br>
-					<div ng-if="dropit">
-						<h1 id="dropthiscourse">It is strongly advised that you drop this course</h1>
-						<a href="https://sws.rosi.utoronto.ca/sws/">
-							<img class="school-icons" src="img/uoft.png">
-						</a>
-						<a href="https://passportyork.yorku.ca/ppylogin/ppylogin">
-							<img class="school-icons" src="img/york.png">
-						</a>
-						<a href="https://cas.ryerson.ca/login?service=https%3A%2F%2Fmy.ryerson.ca%2FLogin">
-							<img class="school-icons" src="img/ryerson.png">
-						</a>
-						<a href="https://student.uwo.ca/psp/heprdweb/?cmd=login&languageCd=ENG&">
-							<img class="school-icons" src="img/western.png">
-						</a>
-						<a href="https://horizon.mcgill.ca/pban1/twbkwbis.P_WWWLogin">
-							<img class="school-icons" src="img/mcgill.png">
-						</a>
-						<a href="https://quest.pecs.uwaterloo.ca/psp/SS/?cmd=login&languageCd+ENG&languageCd=ENG&">
-							<img class="school-icons" src="img/waterloo.png">
-						</a>
-						<a href="https://epprd.mcmaster.ca/psp/prepprd/?cmd=login">
-							<img class="school-icons" src="img/mcmaster.png">
-						</a>
-						<a href="http://www.uottawa.ca/en/students">
-							<img class="school-icons" src="img/ottawa.png">
-						</a>
-
-					</div>
-					<div ng-if="acedit"><h1 id="aced">YOU ACED IT</h1></div>
-	</div>
-	</div>
-</div>
-
-
-
-
-
 </div>

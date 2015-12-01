@@ -10,5 +10,14 @@ dropitApp.config(["$routeProvider",
 				when("/", {
 					templateUrl : "partials/main.html",
 					controller : "MainCtrl"
+				}).
+				when("/marks", {
+					templateUrl : "partials/marks.html",
+					controller : "MarksCtrl"
+				}).
+				when("/coffee", {
+					templateUrl : "partials/coffee.html",
+					controller : "CoffeeCtrl"
 				});
-		}]);
+		}
+]);

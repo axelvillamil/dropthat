@@ -4,24 +4,12 @@ dropitControllers.controller("MainCtrl", function(
 			$rootScope,
 			$http,
 			$location) {
-	$scope.assessments = [
-		{
-			name : "Quiz",
-			grade : 80,
-			weight: 10,
-		},
-		{
-			name : "Assignment",
-			grade : 75,
-			weight: 15,
-		},
-		{
-			name : "Midterm",
-			grade : 70,
-			weight: 30,
-		},
-	];
-	$scope.goal_mark = 50;
+	$scope.open_calculator = function(){
+		$location.path("/marks/");
+	}
+	$scope.open_coffee = function(){
+		$location.path("/coffee/");
+	}
 	$scope.icons =
 		{
 			calc: 'calc_wsh',
@@ -75,6 +63,31 @@ dropitControllers.controller("MainCtrl", function(
 			$scope.icons.class='';
 		}
 	}
+});
+
+dropitControllers.controller("MarksCtrl", function(
+			$scope,
+			$rootScope,
+			$http,
+			$location) {
+	$scope.goal_mark = 50;
+	$scope.assessments = [
+		{
+			name : "Quiz",
+			grade : 80,
+			weight: 10,
+		},
+		{
+			name : "Assignment",
+			grade : 75,
+			weight: 15,
+		},
+		{
+			name : "Midterm",
+			grade : 70,
+			weight: 30,
+		},
+	];
 	$scope.add_assessment = function(){
 		$scope.assessments.push({
 			name : "new assessment",
@@ -104,6 +117,7 @@ dropitControllers.controller("MainCtrl", function(
 
 		$scope.total_weight = total_weight;
 		$scope.current_mark = (current_score / total_weight) * 100
+		$rootScope.current_mark = (current_score / total_weight) * 100
 		$scope.final_mark = (($scope.goal_mark) - current_score)/((100 - $scope.total_weight)/100)
 
 		if ($scope.final_mark >= 100){
@@ -116,6 +130,18 @@ dropitControllers.controller("MainCtrl", function(
 		} else {
 			$scope.acedit = false;
 		}
+	}
+	$scope.update();
+});
+
+dropitControllers.controller("CoffeeCtrl", function(
+			$scope,
+			$rootScope,
+			$http,
+			$location) {
+	$scope.update = function(){
+		ratio = $scope.desired_mark / $scope.current_mark
+		$scope.required = Math.ceil(Math.max(1, $scope.current_coffees * ratio));
 	}
 	$scope.update();
 });
