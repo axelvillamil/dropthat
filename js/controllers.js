@@ -91,7 +91,6 @@ dropitControllers.controller("MarksCtrl", function(
 			weight: 30,
 		},
 	];
-
 	$scope.add_assessment = function(){
 
 		$scope.assessments.push({

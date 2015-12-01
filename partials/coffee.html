@@ -2,20 +2,29 @@
 	<div class="col-md-6">
 		{{ update () }}
 		<div class=well>
-			What's your current mark?
-			<input class="input-style" ng-model="current_mark" type="number" name="grade" min="0" max="100">
+			<h3 class="results">
+				What's your current mark?
+				<input class="input-style" ng-model="current_mark" type="number" name="grade" min="0" max="100">%
+			</h3>
 			<br>
-			What's the mark that you want to get?
-			<input class="input-style" ng-model="desired_mark" type="number" name="grade" min="0" max="100">
+			<h3 class="results">
+				What's the mark that you want to get?
+				<input class="input-style" ng-model="desired_mark" type="number" name="grade" min="0" max="100">%
+			</h3>
 			<br>
-			How many cups of coffee do you drink a day?:
+			<h3 class="results">
+				How many cups of coffee do you drink a day?
 			<input class="input-style" ng-model="current_coffees" type="number" name="grade" min="0" max="100" ng-change="update()">
+		</h3>
 			<br>
 		</div>
 	</div>
 	<div class="col-md-6">
 		<div class="well">
-			<h2 class="results">You'll need <b>{{ required || '?'}}</b> cups of coffee a day</h2>
+			<h3 class="results">You'll need
+				<b>{{ required || '?'}}</b>
+				cups of coffee based on your productivity</h3>
+				<div id="coffee_cup"></div>
 		</div>
 	</div>
 </div>
