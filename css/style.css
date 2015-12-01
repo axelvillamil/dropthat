@@ -26,6 +26,12 @@ width: 100% !important;
 #page-logo {
 	margin-bottom: 20px;
 	height: 100vh;
+	display: table;
+}
+
+#page-logo-center {
+	vertical-align: middle;
+	display: table-cell;
 }
 
 #page-logo img {
@@ -152,7 +158,7 @@ width: 100% !important;
 
 #icon_page_mobile {
 	margin: 0 auto;
-	display: block;
+	display: table !important;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	height: 100vh;
@@ -167,10 +173,8 @@ width: 100% !important;
 }
 
 #icon_set_mobile {
-	text-align: center;
 	display: table-cell;
 	vertical-align: middle;
-	width: auto;
 
 }
 
@@ -290,9 +294,7 @@ width: 100% !important;
 
 /*INPUT STYLING BEGIN*/
 
-#mark-calc {
-	margin-top: 50px;
-}
+
 
 well {
 	margin: -10mpx !important;
