@@ -197,7 +197,11 @@ width: 100% !important;
 	vertical-align: middle !important;
 }
 
->>>>>>> master
+#chair_icon:hover {
+	opacity: .5;
+}
+
+
 #calc_link:active{
 	opacity: 30%;
 }
@@ -287,7 +291,7 @@ width: 100% !important;
 	display: block;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	height: 100%;
+	height: 100vh;
 	background-color: #DB8E3A;
 
 }
