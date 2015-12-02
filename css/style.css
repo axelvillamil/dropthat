@@ -178,9 +178,9 @@ width: 100% !important;
 
 }
 
-#mark_media {
+/*#mark_media {
 	margin-top: 15px !important;
-}
+}*/
 
 .icons {
 	width: 23%;
@@ -189,12 +189,16 @@ width: 100% !important;
 
 .icons_mobile {
 
-	width: 150px;
+	width: 26vh;
 	margin: 10px;
 }
 
 .icon_titles {
 	vertical-align: middle !important;
+}
+
+.icon_titles h2 {
+	font-size: 7vw !important;
 }
 
 #chair_icon:hover {
