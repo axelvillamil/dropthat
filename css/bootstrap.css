@@ -6610,9 +6610,10 @@ button.close {
 .visible-lg-inline-block {
   display: none !important;
 }
+/*CUSTOM CHANGES BY AXEL VILLAMIL - ORGINALLY .visible-xs is block*/
 @media (max-width: 767px) {
   .visible-xs {
-    display: block !important;
+    display: table !important;
   }
   table.visible-xs {
     display: table !important;
