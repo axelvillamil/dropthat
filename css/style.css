@@ -205,10 +205,6 @@ width: 100% !important;
 	opacity: .5;
 }
 
-.netflixchill {
-	opacity: .5;
-}
-
 
 #calc_link:active{
 	opacity: 30%;
@@ -242,6 +238,7 @@ width: 100% !important;
 
 .orange {
 	color: #DB8E3A;
+	opacity: .5;
 }
 
 .strikethrough {
