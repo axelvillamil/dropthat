@@ -24,7 +24,7 @@ width: 100% !important;
 }
 
 #page-logo {
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 	height: 100vh;
 	display: table;
 }
@@ -178,9 +178,9 @@ width: 100% !important;
 
 }
 
-/*#mark_media {
+#mark_media {
 	margin-top: 15px !important;
-}*/
+}
 
 .icons {
 	width: 23%;
