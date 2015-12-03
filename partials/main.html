@@ -22,9 +22,11 @@
 				<img id="coffee_icon" class="icons" ng-mouseover="coffeechange()" ng-mouseleave="coffeeback()" ng-src="img/{{icons.coffee}}.png">
 			</a>
 			<!-- <a href="" ng-click="open_chill()" id="calc_link"> -->
+			<a class="disabled" id="calc_link">
 				<img id="chair_icon" class="icons" ng-mouseover="chairchange()" ng-mouseleave="chairback()" ng-src="img/{{icons.chair}}.png">
 			<!-- </a> -->
-			<h1>I need to <b class="{{icons.class}}"><b class="strikethrough">{{icons.netflix}}</b>{{icons.phrase}}</b></h1>
+		</a>
+			<h1>I need to <b class="{{icons.class}} netflixchill"><b class="strikethrough">{{icons.netflix}}</b>{{icons.phrase}}</b></h1>
 		</div>
 	</div>
 
@@ -57,11 +59,12 @@
 			<div class="media">
 				<div class="media-left">
 					<!-- <a href="" ng-click="open_chill()" id="calc_link"> -->
+					<a href="" class="disabled" id="calc_link">
 						<img id="chair_icon" class="icons_mobile" ng-mouseover="chairchange()" ng-mouseleave="chairback()" ng-src="img/{{icons.chair}}.png">
-					<!-- </a> -->
+					</a>
 				</div>
 				<div class="media-body icon_titles">
-					<h2 class="media-heading orange">Chill</h2>
+					<h2 class="media-heading orange netflixchill">Chill</h2>
 				</div>
 			</div>
 

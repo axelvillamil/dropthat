@@ -201,7 +201,11 @@ width: 100% !important;
 	font-size: 7vw !important;
 }
 
-#chair_icon:hover {
+#chair_icon {
+	opacity: .5;
+}
+
+.netflixchill {
 	opacity: .5;
 }
 
