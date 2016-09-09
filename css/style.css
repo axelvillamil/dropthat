@@ -301,12 +301,31 @@ width: 100% !important;
 
 }
 
+.well {
+	background-color: transparent !important;
+	border-color: transparent !important;
+	border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+} 
+
+table, th, td, tr, thead {
+
+	border-color: #505050 !important;
+
+}
+
+@media screen and (max-width: 767px) {
+	.table-responsive {
+		border: transparent !important;
+	}
+
+}
 
 /*INPUT STYLING BEGIN*/
 
 
 
-well {
+.well {
 	margin: -10mpx !important;
 }
 
@@ -348,16 +367,16 @@ input[type=number]::-webkit-outer-spin-button {
 #add-btn {
 	float: right;
 	margin-right: 10px;
-	border: 2px solid #C0C0C0;
+	border: 2px solid #383838;
 	background-color: transparent;
-	color: #C0C0C0;
+	color: #383838;
 }
 
 #rmv-btn {
 	float: right;
-	border: 2px solid #C0C0C0;
+	border: 2px solid #383838;
 	background-color: transparent;
-	color: #C0C0C0;
+	color: #383838;
 }
 
 #rmv-btn:hover{
