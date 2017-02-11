@@ -99,8 +99,13 @@ dropitControllers.controller("MarksCtrl", function(
 			weight : 10,
 		});
 	}
-	$scope.remove_assessment = function(){
-		$scope.assessments.pop();
+	$scope.remove_assessment = function(assessment){
+		if (assessment == undefined){
+			$scope.assessments.pop();
+		} else {
+			var index = $scope.assessments.indexOf(assessment);
+			$scope.assessments.splice(index, 1);
+		}
 	}
 	$scope.update = function(){
 

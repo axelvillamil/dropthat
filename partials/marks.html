@@ -35,6 +35,7 @@
 							</thead>
 							<tbody>
 								<tr ng-repeat="assessment in assessments">
+									<td><button class="btn btn-dtn" id="rmv-btn" ng-click="remove_assessment(assessment)">-</button></td>
 									<td><input class="input-name input-style" ng-model="assessment.name" type="text" name="name"></td>
 									<td><input class="input-style" ng-model="assessment.grade" type="number" name="grade" min="0" max="100"></td>
 									<td><input class="input-style" ng-model="assessment.weight" type="number" name="weight" min="0" max="100"></td>
